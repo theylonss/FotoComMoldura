@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor de Foto com Moldura</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Editor de Foto com Moldura</h1>
+
+    <p class="steps">
+        1️⃣ Escolha uma foto<br>
+        2️⃣ Ajuste arrastando e usando zoom<br>
+        3️⃣ Baixe sua imagem com moldura
+    </p>
+
+    <input 
+        type="file" 
+        accept="image/*" 
+        onchange="loadImage(event)"
+    >
+
+    <canvas id="canvas" width="500" height="500"></canvas>
+
+    <div class="controls">
+        <button onclick="zoomOut()">−</button>
+        <button onclick="zoomIn()">+</button>
+    </div>
+
+    <button class="download" onclick="downloadImage()">Baixar Imagem</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
